@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+$meno: rgb(159, 42, 163);
+$mesto: rgb(52, 116, 33);
+$zviera: rgb(185, 117, 27);
+$vec: rgb(40, 129, 180);
+
 *,
 *::after,
 *::before {
@@ -13,25 +20,77 @@ body {
     rgba(63, 94, 251, 1) 0%,
     rgba(252, 70, 107, 1) 100%
   );
+  font-family: 'Open Sans', sans-serif;
+  color: white;
 }
 
 .container {
   height: 100vh;
   width: 100vw;
-  background-color: rgb(71, 35, 112);
-  max-width: 720px;
+  max-width: 768px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   position: relative;
   padding: 2em;
 }
 
+//todo
+.settings-panel {
+  display: none;
+}
+
 .fa-icon {
-  color: white;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  font-size: 1.5em;
+  top: 0;
+  right: 0;
+}
+
+.category {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  transform: translateY(-2em);
+  display: flex;
+  justify-content: center;
+
+  svg {
+    fill: lighten($color: $meno, $amount: 25);
+  }
+
+  &.meno {
+    background-color: $meno;
+  }
+  &.mesto {
+    background-color: $mesto;
+  }
+  &.zviera {
+    background-color: $zviera;
+  }
+  &.vec {
+    background-color: $vec;
+  }
+}
+
+.letter {
+  font-size: 10em;
+  font-weight: 700;
 }
 
 .button-next-turn {
-  padding: 1em;
+  width: 100%;
+  padding: 0.7em;
+  color: $meno;
+  font-weight: 700;
+  background-color: white;
+  font-size: 1.4em;
+  border: 0;
+
+  border-radius: 5em;
 }

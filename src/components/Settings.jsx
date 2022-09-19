@@ -1,4 +1,4 @@
 const Settings = () => {
-  return <div>Settings</div>;
+  return <div className="settings-panel">Settings</div>;
 };
 export default Settings;

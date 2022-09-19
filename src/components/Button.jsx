@@ -1,4 +1,12 @@
+import { useContext } from 'react';
+import AppContext from '../context/AppContext';
+
 const Button = () => {
-  return <button className="button-next-turn">NEXT</button>;
+  const { nextTurn } = useContext(AppContext);
+  return (
+    <button className="button-next-turn" onClick={() => nextTurn()}>
+      NEXT
+    </button>
+  );
 };
 export default Button;
