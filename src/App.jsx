@@ -6,13 +6,15 @@ import Settings from './components/Settings';
 
 const App = () => {
   return (
-    <div className="container">
-      <Settings />
-      <FaIcon />
-      <Category />
-      <Letter />
-      <Button />
-    </div>
+    <>
+      <div className="container">
+        <Settings />
+        <FaIcon />
+        <Category />
+        <Letter />
+        <Button />
+      </div>
+    </>
   );
 };
 export default App;

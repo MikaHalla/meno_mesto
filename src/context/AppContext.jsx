@@ -7,6 +7,7 @@ const AppContext = createContext();
 export const AppProvider = ({ children }) => {
   const [letter, setLetter] = useState('');
   const [category, setCategory] = useState('');
+  const [mobileMenu, setMobileMenu] = useState(false);
 
   const randomNumber = (max) => Math.floor(Math.random() * max);
 
@@ -15,8 +16,12 @@ export const AppProvider = ({ children }) => {
     setCategory(categories[randomNumber(categories.length)]);
   };
 
+  const tgMobileMenu = () => setMobileMenu(!mobileMenu);
+
   return (
-    <AppContext.Provider value={{ letter, category, nextTurn }}>
+    <AppContext.Provider
+      value={{ letter, category, nextTurn, mobileMenu, tgMobileMenu }}
+    >
       {children}
     </AppContext.Provider>
   );
