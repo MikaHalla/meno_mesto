@@ -8,8 +8,7 @@
 }
 
 body {
-  background: rgb(63, 94, 251);
-  background: radial-gradient(circle, rgb(63, 94, 251) 0%, rgb(252, 70, 107) 100%);
+  background: radial-gradient(circle, rgb(70, 70, 70) 0%, rgb(70, 70, 70) 90%);
   font-family: "Open Sans", sans-serif;
   color: white;
 }
@@ -46,34 +45,88 @@ body {
   position: absolute;
   z-index: -1;
   transform: translateY(-2em);
+  padding-top: 2em;
   display: flex;
+  align-items: flex-start;
   justify-content: center;
 }
-.category svg {
-  fill: #d772db;
+.category.animal {
+  background: radial-gradient(circle, rgb(185, 117, 27) 0%, rgb(70, 70, 70) 90%);
 }
-.category.meno {
-  background-color: rgb(159, 42, 163);
+.category.animal svg {
+  fill: #e39c3e;
 }
-.category.mesto {
-  background-color: rgb(52, 116, 33);
+.category.boyName {
+  background: radial-gradient(circle, rgb(40, 129, 180) 0%, rgb(70, 70, 70) 90%);
 }
-.category.zviera {
-  background-color: rgb(185, 117, 27);
+.category.boyName svg {
+  fill: #50a7d8;
 }
-.category.vec {
-  background-color: rgb(40, 129, 180);
+.category.city {
+  background: radial-gradient(circle, rgb(52, 116, 33) 0%, rgb(70, 70, 70) 90%);
+}
+.category.city svg {
+  fill: #4fb032;
+}
+.category.clothing {
+  background: radial-gradient(circle, rgb(64, 33, 206) 0%, rgb(70, 70, 70) 90%);
+}
+.category.clothing svg {
+  fill: #7157e4;
+}
+.category.food {
+  background: radial-gradient(circle, rgb(196, 170, 53) 0%, rgb(70, 70, 70) 90%);
+}
+.category.food svg {
+  fill: #d8c46e;
+}
+.category.girlName {
+  background: radial-gradient(circle, rgb(182, 72, 185) 0%, rgb(70, 70, 70) 90%);
+}
+.category.girlName svg {
+  fill: #cc7fce;
+}
+.category.item {
+  background: radial-gradient(circle, rgb(170, 27, 27) 0%, rgb(70, 70, 70) 90%);
+}
+.category.item svg {
+  fill: #df3333;
+}
+.category.occupation {
+  background: radial-gradient(circle, rgb(104, 20, 201) 0%, rgb(70, 70, 70) 90%);
+}
+.category.occupation svg {
+  fill: #8f3eec;
+}
+.category.plant {
+  background: radial-gradient(circle, rgb(98, 122, 42) 0%, rgb(70, 70, 70) 90%);
+}
+.category.plant svg {
+  fill: #90b33e;
+}
+.category.sport {
+  background: radial-gradient(circle, rgb(79, 93, 138) 0%, rgb(70, 70, 70) 90%);
+}
+.category.sport svg {
+  fill: #7583b0;
+}
+.category.world {
+  background: radial-gradient(circle, rgb(36, 167, 134) 0%, rgb(70, 70, 70) 90%);
+}
+.category.world svg {
+  fill: #41d6b1;
 }
 
 .letter {
-  font-size: 10em;
+  font-size: 15em;
   font-weight: 700;
+  margin-top: 0.5em;
 }
 
 .button-next-turn {
   width: 100%;
   padding: 0.7em;
-  color: rgb(159, 42, 163);
+  color: rgb(70, 70, 70);
   font-weight: 700;
   background-color: white;
   font-size: 1.4em;

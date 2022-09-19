@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-$meno: rgb(159, 42, 163);
-$mesto: rgb(52, 116, 33);
-$zviera: rgb(185, 117, 27);
-$vec: rgb(40, 129, 180);
+$gray: rgb(70, 70, 70);
+
+$animal: rgb(185, 117, 27);
+$boyName: rgb(40, 129, 180);
+$city: rgb(52, 116, 33);
+$clothing: rgb(64, 33, 206);
+$food: rgb(196, 170, 53);
+$girlName: rgb(182, 72, 185);
+$item: rgb(170, 27, 27);
+$occupation: rgb(104, 20, 201);
+$plant: rgb(98, 122, 42);
+$sport: rgb(79, 93, 138);
+$world: rgb(36, 167, 134);
 
 *,
 *::after,
@@ -14,12 +23,7 @@ $vec: rgb(40, 129, 180);
 }
 
 body {
-  background: rgb(63, 94, 251);
-  background: radial-gradient(
-    circle,
-    rgba(63, 94, 251, 1) 0%,
-    rgba(252, 70, 107, 1) 100%
-  );
+  background: radial-gradient(circle, $gray 0%, $gray 90%);
   font-family: 'Open Sans', sans-serif;
   color: white;
 }
@@ -57,40 +61,102 @@ body {
   position: absolute;
   z-index: -1;
   transform: translateY(-2em);
+  padding-top: 2em;
   display: flex;
+  align-items: flex-start;
   justify-content: center;
 
-  svg {
-    fill: lighten($color: $meno, $amount: 25);
+  &.animal {
+    background: radial-gradient(circle, $animal 0%, $gray 90%);
+    svg {
+      fill: lighten($color: $animal, $amount: 15);
+    }
   }
 
-  &.meno {
-    background-color: $meno;
+  &.boyName {
+    background: radial-gradient(circle, $boyName 0%, $gray 90%);
+    svg {
+      fill: lighten($color: $boyName, $amount: 15);
+    }
   }
-  &.mesto {
-    background-color: $mesto;
+
+  &.city {
+    background: radial-gradient(circle, $city 0%, $gray 90%);
+    svg {
+      fill: lighten($color: $city, $amount: 15);
+    }
   }
-  &.zviera {
-    background-color: $zviera;
+
+  &.clothing {
+    background: radial-gradient(circle, $clothing 0%, $gray 90%);
+    svg {
+      fill: lighten($color: $clothing, $amount: 15);
+    }
   }
-  &.vec {
-    background-color: $vec;
+
+  &.food {
+    background: radial-gradient(circle, $food 0%, $gray 90%);
+    svg {
+      fill: lighten($color: $food, $amount: 15);
+    }
+  }
+
+  &.girlName {
+    background: radial-gradient(circle, $girlName 0%, $gray 90%);
+    svg {
+      fill: lighten($color: $girlName, $amount: 15);
+    }
+  }
+
+  &.item {
+    background: radial-gradient(circle, $item 0%, $gray 90%);
+    svg {
+      fill: lighten($color: $item, $amount: 15);
+    }
+  }
+
+  &.occupation {
+    background: radial-gradient(circle, $occupation 0%, $gray 90%);
+    svg {
+      fill: lighten($color: $occupation, $amount: 15);
+    }
+  }
+
+  &.plant {
+    background: radial-gradient(circle, $plant 0%, $gray 90%);
+    svg {
+      fill: lighten($color: $plant, $amount: 15);
+    }
+  }
+
+  &.sport {
+    background: radial-gradient(circle, $sport 0%, $gray 90%);
+    svg {
+      fill: lighten($color: $sport, $amount: 15);
+    }
+  }
+
+  &.world {
+    background: radial-gradient(circle, $world 0%, $gray 90%);
+    svg {
+      fill: lighten($color: $world, $amount: 15);
+    }
   }
 }
 
 .letter {
-  font-size: 10em;
+  font-size: 15em;
   font-weight: 700;
+  margin-top: 0.5em;
 }
 
 .button-next-turn {
   width: 100%;
   padding: 0.7em;
-  color: $meno;
+  color: $gray;
   font-weight: 700;
   background-color: white;
   font-size: 1.4em;
   border: 0;
-
   border-radius: 5em;
 }

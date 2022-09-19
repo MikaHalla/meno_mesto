@@ -1,10 +1,10 @@
 import { createContext, useState } from 'react';
+import { categories } from '../constants/categories';
+import { letters } from '../constants/letters';
 
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  const categories = ['meno', 'mesto', 'zviera', 'vec'];
   const [letter, setLetter] = useState('');
   const [category, setCategory] = useState('');
 
