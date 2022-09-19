@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(63, 94, 251);
+  background: radial-gradient(circle, rgb(63, 94, 251) 0%, rgb(252, 70, 107) 100%);
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(71, 35, 112);
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding: 2em;
+}
+
+.fa-icon {
+  color: white;
+}
+
+.button-next-turn {
+  padding: 1em;
+}/*# sourceMappingURL=main.css.map */
