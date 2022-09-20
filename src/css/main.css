@@ -37,16 +37,23 @@ body {
   position: absolute;
   padding: 2em;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
   transform: translateY(-100%);
   transition: 0.3s transform ease-in-out;
+  color: black;
 }
 .settings-panel.visible {
   transform: translateY(0);
 }
 .settings-panel i {
-  color: black;
   font-size: 2em;
+}
+.settings-panel .difficulty {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .fa-icon {

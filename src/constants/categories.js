@@ -1,4 +1,4 @@
-export const categories = [
+export const defaultCategories = [
   'animal',
   'boyName',
   'city',
