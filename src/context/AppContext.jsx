@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useState } from 'react';
 import { defaultCategories } from '../constants/categories';
 import { easyLetters, hardLetters } from '../constants/letters';
 
@@ -32,6 +32,20 @@ export const AppProvider = ({ children }) => {
     setLetters(easyLetters);
   };
 
+  const tgCategory = (category) => {
+    const clickedCategory = categories.find(
+      (element) => element === category
+    );
+    if (clickedCategory) {
+      const filteredCategories = categories.filter(
+        (element) => element !== clickedCategory
+      );
+      setCategories(filteredCategories);
+    } else {
+      setCategories([...categories, category]);
+    }
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -44,6 +58,7 @@ export const AppProvider = ({ children }) => {
         difficulty,
         increaseDifficulty,
         decreaseDifficulty,
+        tgCategory,
       }}
     >
       {children}

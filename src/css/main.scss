@@ -210,4 +210,8 @@ body {
   font-size: 1.4em;
   border: 0;
   border-radius: 5em;
+
+  &:disabled {
+    opacity: 0.2;
+  }
 }

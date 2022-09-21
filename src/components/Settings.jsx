@@ -2,12 +2,12 @@ import { useContext } from 'react';
 import AppContext from '../context/AppContext';
 import MenuButton from './MenuButton';
 import CategoryButton from './CategoryButton';
+import { defaultCategories } from '../constants/categories';
 
 const Settings = () => {
   const {
     mobileMenu,
     tgMobileMenu,
-    categories,
     increaseDifficulty,
     decreaseDifficulty,
   } = useContext(AppContext);
@@ -28,8 +28,12 @@ const Settings = () => {
         />
       </div>
       <div className="categories">
-        {categories.map((category) => (
-          <CategoryButton key={category} category={category} />
+        {defaultCategories.map((category) => (
+          <CategoryButton
+            key={category}
+            category={category}
+            id={category}
+          />
         ))}
       </div>
     </div>
