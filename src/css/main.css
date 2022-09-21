@@ -54,6 +54,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  padding: 1.3em;
 }
 
 .fa-icon {
@@ -63,6 +64,14 @@ body {
   font-size: 1.5em;
   top: 0;
   right: 0;
+}
+
+.categories {
+  width: 100%;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
 }
 
 .category {
@@ -76,71 +85,82 @@ body {
   align-items: flex-start;
   justify-content: center;
 }
+.category-icon {
+  height: 4em;
+  width: 4em;
+  margin: auto;
+}
 .category.animal {
-  background: radial-gradient(circle, rgb(185, 117, 27) 0%, rgb(70, 70, 70) 90%);
+  background: radial-gradient(circle, hsl(0deg, 40%, 50%) 0%, rgb(70, 70, 70) 90%);
 }
 .category.animal svg {
-  fill: #e39c3e;
+  fill: #c98282;
+}
+.category.bodyPart {
+  background: radial-gradient(circle, hsl(330deg, 40%, 50%) 0%, rgb(70, 70, 70) 90%);
+}
+.category.bodyPart svg {
+  fill: #c982a6;
 }
 .category.boyName {
-  background: radial-gradient(circle, rgb(40, 129, 180) 0%, rgb(70, 70, 70) 90%);
+  background: radial-gradient(circle, hsl(210deg, 40%, 50%) 0%, rgb(70, 70, 70) 90%);
 }
 .category.boyName svg {
-  fill: #50a7d8;
+  fill: #82a6c9;
 }
 .category.city {
-  background: radial-gradient(circle, rgb(52, 116, 33) 0%, rgb(70, 70, 70) 90%);
+  background: radial-gradient(circle, hsl(60deg, 40%, 50%) 0%, rgb(70, 70, 70) 90%);
 }
 .category.city svg {
-  fill: #4fb032;
+  fill: #c9c982;
 }
 .category.clothing {
-  background: radial-gradient(circle, rgb(64, 33, 206) 0%, rgb(70, 70, 70) 90%);
+  background: radial-gradient(circle, hsl(240deg, 40%, 50%) 0%, rgb(70, 70, 70) 90%);
 }
 .category.clothing svg {
-  fill: #7157e4;
+  fill: #8282c9;
 }
 .category.food {
-  background: radial-gradient(circle, rgb(196, 170, 53) 0%, rgb(70, 70, 70) 90%);
+  background: radial-gradient(circle, hsl(120deg, 40%, 50%) 0%, rgb(70, 70, 70) 90%);
 }
 .category.food svg {
-  fill: #d8c46e;
+  fill: #82c982;
 }
 .category.girlName {
-  background: radial-gradient(circle, rgb(182, 72, 185) 0%, rgb(70, 70, 70) 90%);
+  background: radial-gradient(circle, hsl(300deg, 40%, 50%) 0%, rgb(70, 70, 70) 90%);
 }
 .category.girlName svg {
-  fill: #cc7fce;
+  fill: #c982c9;
 }
 .category.item {
-  background: radial-gradient(circle, rgb(170, 27, 27) 0%, rgb(70, 70, 70) 90%);
+  background: radial-gradient(circle, hsl(180deg, 40%, 50%) 0%, rgb(70, 70, 70) 90%);
 }
 .category.item svg {
-  fill: #df3333;
+  fill: #82c9c9;
 }
 .category.occupation {
-  background: radial-gradient(circle, rgb(130, 38, 235) 0%, rgb(70, 70, 70) 90%);
+  background: radial-gradient(circle, hsl(30deg, 40%, 50%) 0%, rgb(70, 70, 70) 90%);
 }
 .category.occupation svg {
-  fill: #aa6cf1;
+  fill: #c9a682;
 }
 .category.plant {
-  background: radial-gradient(circle, rgb(98, 122, 42) 0%, rgb(70, 70, 70) 90%);
+  background: radial-gradient(circle, hsl(90deg, 40%, 50%) 0%, rgb(70, 70, 70) 90%);
 }
 .category.plant svg {
-  fill: #90b33e;
+  fill: #a6c982;
 }
 .category.sport {
-  background: radial-gradient(circle, rgb(218, 162, 58) 0%, rgb(70, 70, 70) 90%);
+  background: radial-gradient(circle, hsl(270deg, 40%, 50%) 0%, rgb(70, 70, 70) 90%);
 }
 .category.sport svg {
-  fill: #e6c07a;
+  fill: #a682c9;
 }
 .category.world {
-  background: radial-gradient(circle, rgb(36, 167, 134) 0%, rgb(70, 70, 70) 90%);
+  background: radial-gradient(circle, hsl(150deg, 40%, 50%) 0%, rgb(70, 70, 70) 90%);
 }
 .category.world svg {
-  fill: #41d6b1;
+  fill: #82c9a6;
 }
 
 .letter {
