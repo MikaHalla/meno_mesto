@@ -166,7 +166,28 @@ body {
 .letter {
   font-size: 15em;
   font-weight: 700;
-  margin-top: 0.5em;
+  margin-top: 0.3em;
+  transform: translateY(15%);
+}
+
+.score-board {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.score-board .score-counter {
+  padding: 0.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  background-color: rgba(70, 70, 70, 0.5);
+  font-size: 2em;
+  font-weight: bold;
+  border: 3px solid white;
 }
 
 .button-next-turn {

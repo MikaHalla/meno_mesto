@@ -11,6 +11,7 @@ export const AppProvider = ({ children }) => {
   const [letter, setLetter] = useState('');
   const [category, setCategory] = useState('');
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [players, setPlayers] = useState([1, 2, 3, 4]);
 
   const randomNumber = (max) => Math.floor(Math.random() * max);
 
@@ -52,6 +53,7 @@ export const AppProvider = ({ children }) => {
         letter,
         category,
         categories,
+        players,
         nextTurn,
         mobileMenu,
         tgMobileMenu,
