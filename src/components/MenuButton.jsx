@@ -5,14 +5,7 @@ const MenuButton = ({ text, action, activeStyle }) => {
   const { difficulty } = useContext(AppContext);
   return (
     <h1
-      style={
-        activeStyle === difficulty
-          ? {
-              borderBottom: '4px solid black',
-              paddingBottom: '.2em',
-            }
-          : { color: 'lightgray' }
-      }
+      className={activeStyle === difficulty ? 'easy' : 'hard'}
       onClick={action}
     >
       {text}

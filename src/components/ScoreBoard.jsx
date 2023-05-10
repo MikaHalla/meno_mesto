@@ -3,11 +3,11 @@ import AppContext from '../context/AppContext';
 import ScoreCounter from './ScoreCounter';
 
 const ScoreBoard = () => {
-  const { players } = useContext(AppContext);
-  return (
+  const { players, letter } = useContext(AppContext);
+  return letter === null ? null : (
     <ul className="score-board">
       {players.map((player) => (
-        <ScoreCounter />
+        <ScoreCounter key={player} />
       ))}
     </ul>
   );

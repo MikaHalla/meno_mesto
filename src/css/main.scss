@@ -21,6 +21,8 @@ $bodyPart: hsl(330, 40%, 50%);
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  //debug
+  // border: 1px solid hsl(350, 100%, 88%);
 }
 
 body {
@@ -32,7 +34,7 @@ body {
 .container {
   height: 100vh;
   width: 100vw;
-  max-width: 768px;
+  // max-width: 768px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -48,7 +50,7 @@ body {
   z-index: 9;
   height: 100vh;
   width: 100vw;
-  max-width: 768px;
+  // max-width: 768px;
   background-color: aliceblue;
   position: absolute;
   padding: 2em;
@@ -69,10 +71,19 @@ body {
   }
 
   .difficulty {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    padding: 1.3em;
+
+    .easy {
+      color: black;
+      padding-bottom: 0.2em;
+      border-bottom: 4px solid black;
+    }
+
+    .hard {
+      color: lightgray;
+    }
   }
 }
 
@@ -88,9 +99,9 @@ body {
 .categories {
   width: 100%;
   height: 50vh;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .category {
@@ -100,14 +111,47 @@ body {
   z-index: -1;
   transform: translateY(-2em);
   padding-top: 2em;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
 
   &-icon {
-    height: 4em;
-    width: 4em;
-    margin: auto;
+    width: 33%;
+
+    text-align: center;
+
+    svg {
+      height: 4em;
+    }
+
+    &:nth-of-type(3n-2) {
+      text-align: start;
+    }
+
+    &:nth-of-type(3n) {
+      text-align: end;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 25%;
+
+      &:nth-of-type(4n-3) {
+        text-align: left;
+      }
+
+      &:nth-of-type(4n-2) {
+        text-align: center;
+      }
+
+      &:nth-of-type(4n-1) {
+        text-align: center;
+      }
+
+      &:nth-of-type(4n) {
+        text-align: end;
+      }
+    }
+  }
+
+  svg {
+    max-height: 70%;
   }
 
   &.animal {
@@ -199,11 +243,11 @@ body {
   font-size: 15em;
   font-weight: 700;
   margin-top: 0.3em;
-  transform: translateY(15%);
 }
 
 .score-board {
   width: 100%;
+  max-width: 500px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -222,11 +266,18 @@ body {
     font-size: 2em;
     font-weight: bold;
     border: 3px solid white;
+
+    &.most-recent {
+      color: $gray;
+      font-weight: 700;
+      background-color: white;
+    }
   }
 }
 
 .button-next-turn {
   width: 100%;
+  max-width: 500px;
   padding: 0.7em;
   color: $gray;
   font-weight: 700;

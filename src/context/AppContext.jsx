@@ -8,10 +8,11 @@ export const AppProvider = ({ children }) => {
   const [letters, setLetters] = useState(easyLetters);
   const [difficulty, setDifficulty] = useState('easy');
   const [categories, setCategories] = useState(defaultCategories);
-  const [letter, setLetter] = useState('');
-  const [category, setCategory] = useState('');
+  const [letter, setLetter] = useState(null);
+  const [category, setCategory] = useState(null);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [players, setPlayers] = useState([1, 2, 3, 4]);
+  const [pointAwarded, setPointAwarded] = useState(false);
 
   const randomNumber = (max) => Math.floor(Math.random() * max);
 
@@ -20,6 +21,7 @@ export const AppProvider = ({ children }) => {
     randomLetter === '1' && (randomLetter = 'Ch');
     setLetter(randomLetter);
     setCategory(categories[randomNumber(categories.length)]);
+    setPointAwarded(false);
   };
 
   const tgMobileMenu = () => setMobileMenu(!mobileMenu);
@@ -61,6 +63,8 @@ export const AppProvider = ({ children }) => {
         increaseDifficulty,
         decreaseDifficulty,
         tgCategory,
+        pointAwarded,
+        setPointAwarded,
       }}
     >
       {children}

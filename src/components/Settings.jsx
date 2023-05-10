@@ -21,6 +21,7 @@ const Settings = () => {
           action={decreaseDifficulty}
           activeStyle="easy"
         />
+        <span></span>
         <MenuButton
           text="ĎChQW"
           action={increaseDifficulty}
